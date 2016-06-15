@@ -1,0 +1,24 @@
+﻿<Window x:Class="TestWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="501.25" Width="525">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Background="Gray" Height="46" Margin="115,20,0,0" VerticalAlignment="Top" Width="295">
+            <Button Content="提交" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click" />
+        </StackPanel>
+
+        <GroupBox Margin="30,80,30,326" BorderBrush="Gray">
+            <GroupBox.Header>
+                标题名字
+            </GroupBox.Header>
+            <TextBlock Text="给我一匹野马可是这只是个TextBlock，不是草原" Margin="85,10,92,10" ></TextBlock>
+        </GroupBox>
+        <ListBox HorizontalAlignment="Left" Name="NameListBox" Height="76" Margin="115,158,0,0" VerticalAlignment="Top"  Width="295" />
+        <Button HorizontalAlignment="Left" Content="弹出新窗口" Margin="115,253,0,0" VerticalAlignment="Top" Width="295" Height="82" Click="Button_Click_4">
+        </Button>
+
+    </Grid>
+</Window>
+
+
+

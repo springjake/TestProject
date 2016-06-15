@@ -1,0 +1,28 @@
+﻿<Window x:Class="TestWPF.Binding.BindingConverter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TestWPF.Binding"
+        Title="BindingConverter" Height="358" Width="370">
+    <Window.Resources>
+        <local:CategoryToResourceConverter x:Key="Cts" />
+        <local:StateToNullableBoolConverter x:Key="Stnb" />
+    </Window.Resources>
+    <StackPanel Background="LightBlue" Margin="10">
+        <ListBox x:Name="ListBoxPlan" Margin="10px">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20px" Height="20px" Source="{Binding Path=Category,Converter={StaticResource Cts}}"></Image>
+                        <TextBlock Text="{Binding Path=Name}"></TextBlock>
+                        <CheckBox IsThreeState="True" IsChecked="{Binding Path=State,Converter={StaticResource Stnb}}"></CheckBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="ButtonLoad" Content="加载数据" Margin="10" Click="ButtonLoad_Click"></Button>
+        <Button x:Name="ButtonSave" Content="保存数据" Margin="10" Click="ButtonSave_Click"></Button>
+    </StackPanel>
+</Window>
+
+
+

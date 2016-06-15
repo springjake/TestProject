@@ -1,0 +1,19 @@
+﻿<Window x:Class="TestWPF.Route.RoutedEvent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TestWPF.Route"
+        local:TimeButton.ReportTime="RoutedEvent_OnReportTime"
+        x:Name="Window1"
+        Title="RoutedEvent" Height="300" Width="300">
+    <Grid x:Name="Grid1" local:TimeButton.ReportTime="RoutedEvent_OnReportTime">
+        <Grid x:Name="Grid2" local:TimeButton.ReportTime="RoutedEvent_OnReportTime">
+            <Grid x:Name="Grid3" local:TimeButton.ReportTime="RoutedEvent_OnReportTime">
+                <StackPanel x:Name="StackPanel1" local:TimeButton.ReportTime="RoutedEvent_OnReportTime">
+                    <ListBox x:Name="ListBox1" />
+                    <local:TimeButton x:Name="TimeButton1" Content="TimeButton"></local:TimeButton>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+

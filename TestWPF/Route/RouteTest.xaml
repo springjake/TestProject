@@ -1,0 +1,18 @@
+﻿<Window x:Class="TestWPF.Route.RouteTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RouteTest" Height="300" Width="300">
+    <Grid x:Name="GridRoot" Button.Click="Button_Click">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="CanvasLeft" Background="Black" Grid.Column="0"  Button.Click="Button_Click1">
+            <Button x:Name="LeftButton" Width="106" Content="Left" Height="229" Canvas.Left="20" Canvas.Top="20" />
+        </Canvas>
+        <Canvas x:Name="CanvasRight" Grid.Column="1" Background="White">
+            <Button x:Name="RightButton" Width="112" Content="Right" Height="221" Canvas.Left="16" Canvas.Top="24"></Button>
+        </Canvas>
+    </Grid>
+</Window>
+

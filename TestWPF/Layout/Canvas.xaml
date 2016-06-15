@@ -1,0 +1,15 @@
+﻿<Window x:Class="TestWPF.Layout.Canvas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Canvas练习" Height="175" Width="300">
+    <Grid>
+        <Canvas Margin="10" VerticalAlignment="Top">
+            <TextBlock Text="用户名：" Canvas.Left="10px" Canvas.Top="20px"></TextBlock>
+            <TextBox Width="200" BorderBrush="Black" Canvas.Left="60" Canvas.Top="20px"></TextBox>
+            <TextBlock Text="密码：" Canvas.Left="10px" Canvas.Top="50px"></TextBlock>
+            <TextBox Width="200" BorderBrush="Black" Canvas.Left="60" Canvas.Top="50px"></TextBox>
+            <Button Content="清除" Canvas.Left="60px" Canvas.Top="90" Width="60px"></Button>
+            <Button Content="提交" Canvas.Left="140px" Canvas.Top="90" Width="60px"></Button>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action="/note/edit">
+    <input type="submit" value="保存"></input>
+    <br />
+    <div>
+
+        <textarea id="notecontent" name="notecontent" style="width: 100%; height: 500px">
+@ViewBag.content
+</textarea>
+        <br />
+        <input type="submit" value="保存"></input>
+    </div>
+</form>
+

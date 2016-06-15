@@ -1,0 +1,19 @@
+﻿<Window x:Class="TestWPF.Layout.WrapPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WrapPanel" Height="300" Width="300">
+    <Grid>
+        <WrapPanel Margin="5" Orientation="Vertical">
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+            <Button Content="按钮" Height="30px" Width="50px"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,76 @@
+﻿<Window x:Class="TestWPF.Binding.Binding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TestWPF.Binding"
+        Title="键联" Height="451" Width="300">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <StackPanel>
+
+        <!-- 测试后台binding -->
+        <StackPanel Margin="10px">
+            <TextBox x:Name="TextBoxName" Margin="5" BorderBrush="Black"></TextBox>
+            <Button Content="提交" Margin="5" Click="Button_Click"></Button>
+        </StackPanel>
+
+        <!-- 测试控件间binding -->
+        <StackPanel Margin="10px">
+            <TextBox x:Name="SliderBindingTextBoxName" BorderBrush="Black" Margin="5"></TextBox>
+            <Slider x:Name="SliderName" Margin="5" Maximum="100" Minimum="-10"></Slider>
+        </StackPanel>
+
+        <StackPanel Margin="10">
+            <TextBox x:Name="TextBoxLengthName" BorderBrush="Black" Margin="5"/>
+            <TextBox x:Name="TextBoxLengthBindingName" Text="{Binding Path=Text.Length,ElementName=TextBoxLengthName,Mode=OneWay}" BorderBrush="Black" Margin="5" />
+        </StackPanel>
+
+        <StackPanel Margin="10">
+            <TextBox x:Name="TextBoxListBinding1" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox x:Name="TextBoxListBinding2" Margin="5" BorderBrush="Black"></TextBox>
+            <TextBox x:Name="TextBoxListBinding3" Margin="5" BorderBrush="Black"></TextBox>
+        </StackPanel>
+
+        <!--没有source的binding -->
+        <StackPanel Background="LightBlue" Margin="10">
+            <StackPanel.DataContext>
+                <local:Student Id="6" Age="18" Name="Tom" />
+            </StackPanel.DataContext>
+            <TextBox Text="{Binding Id}" Margin="5"></TextBox>
+            <TextBox Text="{Binding Name}" Margin="5"></TextBox>
+            <TextBox Text="{Binding Age}" Margin="5"></TextBox>
+        </StackPanel>
+
+
+        <StackPanel Margin="10">
+            <TextBlock Text="选中的Id："></TextBlock>
+            <TextBox x:Name="IdTextBoxName" Margin="5"></TextBox>
+            <TextBlock Text="列表："></TextBlock>
+            <ListBox x:Name="StudentListBoxName">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Path=Id}" Margin="2"></TextBlock>
+                            <TextBlock Text="{Binding Path=Name}" Margin="2"></TextBlock>
+                            <TextBlock Text="{Binding Path=Age}" Margin="2"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+        </StackPanel>
+
+        <StackPanel Margin="10">
+            <Grid Margin="10" x:Name="TestGrodName2" Background="Red">
+                <DockPanel Margin="10" Background="Yellow">
+                    <Grid Margin="10" x:Name="TestGridName" Background="Orange">
+                        <DockPanel Margin="10px" Background="LawnGreen">
+                            <TextBox x:Name="InnerTextBoxName" Margin="10"></TextBox>
+                        </DockPanel>
+                    </Grid>
+                </DockPanel>
+            </Grid>
+        </StackPanel>
+
+    </StackPanel>
+    </ScrollViewer>
+</Window>
+
